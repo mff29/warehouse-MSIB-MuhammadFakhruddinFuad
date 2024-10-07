@@ -73,22 +73,6 @@
      });
 
      function alert_delete(id) {
-          if (confirm("Apakah Anda yakin ingin menghapus gudang ini?")) {
-               $.ajax({
-                    type: "DELETE",
-                    url: '/gudang/' + id,
-                    success: function (response) {
-                         alert(response.success);
-                         $('#gudang-table').DataTable().ajax.reload(); // Refresh DataTable
-                    },
-                    error: function (xhr) {
-                         alert('Terjadi kesalahan saat menghapus gudang.');
-                    }
-               });
-          }
-     }
-
-     function alert_delete(id) {
           var dataId = id;
           Swal.fire({
                title: 'Konfirmasi',
